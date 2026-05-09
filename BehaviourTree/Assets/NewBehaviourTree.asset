@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55732ba3094dedd42ac920e7a767feeb, type: 3}
+  m_Name: NewBehaviourTree
+  m_EditorClassIdentifier: 
+  Id: 74f7c028-19cd-41a8-b7e7-80c476a7c40d
+  RootNodeId: 
+  Nodes:
+  - Id: aba5e98b-deae-4e56-aae3-162d9fb6b160
+    NodeType: 0
+    Name: Selector
+    Position: {x: 297.3333, y: -132.66667}
+    ActionType: 
+    ConditionType: 
+    Params: []
+  - Id: 456f2149-67a1-488f-9229-fdcaead4dc73
+    NodeType: 1
+    Name: Sequence
+    Position: {x: 46.666668, y: 110.666664}
+    ActionType: 
+    ConditionType: 
+    Params: []
+  - Id: be727ff5-144f-4f72-a818-19a3c1f05446
+    NodeType: 2
+    Name: MemorySequence
+    Position: {x: 576, y: 110.666664}
+    ActionType: 
+    ConditionType: 
+    Params: []
+  - Id: e8bef159-9dc0-4d34-aace-e81c60fbb332
+    NodeType: 3
+    Name: Repeater
+    Position: {x: 576, y: -14}
+    ActionType: 
+    ConditionType: 
+    Params: []
+  - Id: a61c3375-9c83-417c-8b1b-b754f188c3af
+    NodeType: 5
+    Name: ChaseTargetAction
+    Position: {x: -186.66666, y: 234.66667}
+    ActionType: ChaseTargetAction
+    ConditionType: 
+    Params: []
+  - Id: 610aa8de-1b53-480e-9cc1-dca995f5c56e
+    NodeType: 5
+    Name: MoveToTargetAction
+    Position: {x: 6, y: 234.66667}
+    ActionType: MoveToTargetAction
+    ConditionType: 
+    Params: []
+  - Id: 5a59e8f8-12a6-448e-bdf8-f254f6bb7ca3
+    NodeType: 4
+    Name: PlayerNearCondition
+    Position: {x: 46.666668, y: -14}
+    ActionType: 
+    ConditionType: PlayerNearCondition
+    Params: []
+  - Id: b97d0e83-4fbc-475d-84d9-2c8c702bdac1
+    NodeType: 5
+    Name: PickRandomPointAction
+    Position: {x: 502.66666, y: 234.66667}
+    ActionType: PickRandomPointAction
+    ConditionType: 
+    Params: []
+  - Id: b857c168-bd51-4370-b388-768a518600f3
+    NodeType: 5
+    Name: MoveToTargetAction
+    Position: {x: 756.6667, y: 234.66667}
+    ActionType: MoveToTargetAction
+    ConditionType: 
+    Params: []
+  - Id: 947ff13e-a0a9-4e0d-8fbe-d714be2b860e
+    NodeType: 5
+    Name: AttackTargetAction
+    Position: {x: 209.33334, y: 234.66667}
+    ActionType: AttackTargetAction
+    ConditionType: 
+    Params: []
+  Edges:
+  - OutputNodeId: aba5e98b-deae-4e56-aae3-162d9fb6b160
+    InputNodeId: 5a59e8f8-12a6-448e-bdf8-f254f6bb7ca3
+    ChildIndex: 0
+  - OutputNodeId: aba5e98b-deae-4e56-aae3-162d9fb6b160
+    InputNodeId: e8bef159-9dc0-4d34-aace-e81c60fbb332
+    ChildIndex: 1
+  - OutputNodeId: be727ff5-144f-4f72-a818-19a3c1f05446
+    InputNodeId: b857c168-bd51-4370-b388-768a518600f3
+    ChildIndex: 1
+  - OutputNodeId: 456f2149-67a1-488f-9229-fdcaead4dc73
+    InputNodeId: a61c3375-9c83-417c-8b1b-b754f188c3af
+    ChildIndex: 0
+  - OutputNodeId: 456f2149-67a1-488f-9229-fdcaead4dc73
+    InputNodeId: 610aa8de-1b53-480e-9cc1-dca995f5c56e
+    ChildIndex: 1
+  - OutputNodeId: 456f2149-67a1-488f-9229-fdcaead4dc73
+    InputNodeId: 947ff13e-a0a9-4e0d-8fbe-d714be2b860e
+    ChildIndex: 2
+  - OutputNodeId: 5a59e8f8-12a6-448e-bdf8-f254f6bb7ca3
+    InputNodeId: 456f2149-67a1-488f-9229-fdcaead4dc73
+    ChildIndex: 0
+  - OutputNodeId: be727ff5-144f-4f72-a818-19a3c1f05446
+    InputNodeId: b97d0e83-4fbc-475d-84d9-2c8c702bdac1
+    ChildIndex: 1
+  - OutputNodeId: e8bef159-9dc0-4d34-aace-e81c60fbb332
+    InputNodeId: be727ff5-144f-4f72-a818-19a3c1f05446
+    ChildIndex: 0
